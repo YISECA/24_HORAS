@@ -3,10 +3,10 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class Form extends Model
+class Equipo extends Model
 
 {
-   protected $table = '24_horas';
+   protected $table = 'equipo_24horas';
 }
 
 

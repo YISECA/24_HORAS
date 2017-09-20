@@ -47,8 +47,6 @@
 
           <script src="{{ asset('public/Js/bootstrap.min.js') }}"></script>
 
-          <script src="{{ asset('public/Js/main.js') }}"></script>
-
           <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
           <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
@@ -69,13 +67,15 @@
 
           <link rel="stylesheet" href="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
 
+          <script src="{{ asset('public/Js/main.js') }}"></script>
+
         
 
             @show
 
 
 
-      <title>EXPEDICIÓN A SUMAPAZ</title>
+      <title>24 HORAS DE CICLO MONTAÑISMO</title>
 
   </head>
 

@@ -14,6 +14,7 @@ use Idrd\Usuarios\Repo\Pais;
 use Idrd\Usuarios\Repo\Ciudad;
 use Idrd\Usuarios\Repo\Localidad;
 use Idrd\Usuarios\Repo\Acceso;
+use App\Equipo;
 use Mail;
 
 class FormController extends BaseController
@@ -112,35 +113,41 @@ class FormController extends BaseController
       }
 
     public function insertar(Request $request)
-
     {
 
      $post = $request->input();
      $usuario = Form::where('cedula', $request->input('cedula'))->first(); 
      if (!empty($usuario)) { return view('error',['error' => 'Este usuario ya fue registrado!'] ); exit(); 
     }
-     $formulario = new Form([]);
 
-      //envio de correo
 
-     if($this->inscritos()<=1100)
+     if($this->inscritos()<=400)
 
      {
 
-        $formulario = $this->store($formulario, $request);
-
-        //$this->store($formulario, $request->input());
-        
-        Mail::send('email', ['user' => $request->input('mail'),'formulario' => $formulario], function ($m) use ($request) 
-        {
-            $m->from('no-reply@idrd.gov.co', 'Registro Exitoso a la Ecotravesía Cerros Orientales');
-            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Registro Exitoso a la Ecotravesía cerros orientales!');
-        });
-
+         if (!empty($request->equipo)) {
+            
+            $equipo = new Equipo;
+            $equipo->nombre_equipo = $request->equipo;
+            $equipo->categoria = $request->categoria;
+            $equipo->nombre_representante = $request->nombre_representante;
+            $equipo->save();
+            $formulario = $this->store_equipo($request,$equipo->id);
+        }else{
+             $formulario = new Form([]);
+             $formulario = $this->store($formulario, $request);
+        }
+            //$this->store($formulario, $request->input());
+           /*  Mail::send('email', ['user' => $request->input('mail'),'formulario' => $formulario], function ($m) use ($request) 
+            {
+                $m->from('no-reply@idrd.gov.co', 'Registro Exitoso a 24 horas de ciclo montañismo');
+                $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Registro Exitoso a 24 horas de ciclo montañismo!');
+            });*/
+          
       }else{
         return view('error', ['error' => 'Lo sentimos el limite de inscritos fue superado!']);
       }
-        return view('error', ['error' =>'  BIENVENIDO, YA HACES PARTE DE LA ECOTRAVESÍA CERROS ORIENTALES 2017, verifica los datos registrados en tu correo electrónico o descarga tu comprobante de inscripción en el menú "Descargar inscripción" que se encuentra en la parte superior.']);
+        return view('error', ['error' =>'  BIENVENIDO, YA HACES PARTE DE 24 HORAS DE CICLO MONTAÑISMO 2017, verifica los datos registrados en tu correo electrónico o descarga tu comprobante de inscripción en el menú "Descargar inscripción" que se encuentra en la parte superior.']);
     }
 
  // conteo de la tabla
@@ -157,21 +164,44 @@ class FormController extends BaseController
     {
         $formulario['cedula'] = $input['cedula'];
         $formulario['tipo_documento'] = $input['tipo_documento'];
-        $formulario['primer_nombre'] = $input['primer_nombre'];
-        $formulario['segundo_nombre'] = $input['segundo_nombre'];
-        $formulario['primer_apellido'] = $input['primer_apellido'];
-        $formulario['segundo_apellido'] = $input['segundo_apellido'];
+        $formulario['nombres'] = $input['nombres'];
+        $formulario['apellidos'] = $input['apellidos'];
         $formulario['genero'] = $input['genero'];
         $formulario['fecha_nacimiento'] = $input['fecha_nacimiento'];
         $formulario['mail'] = $input['mail'];
         $formulario['celular'] = $input['celular'];
         $formulario['eps'] = $input['eps'];
-        $formulario['talla'] = $input['talla'];
         $formulario['barrio'] = $input['barrio'];
         $formulario['tipo_sangre'] = $input['tipo_sangre'];
         $formulario['nombre_contacto'] = $input['nombre_contacto'];
         $formulario['numero_contacto'] = $input['numero_contacto'];
         $formulario->save();
+        return $formulario;        
+    }
+
+     private function store_equipo( $input,$id_equipo)
+
+    {   
+      $i=0;
+      foreach ($input['cedula'] as $cedula) {  
+        $formulario = new Form([]);
+          $formulario['id_equipo'] = $id_equipo;
+          $formulario['cedula'] = $input['cedula'][$i];
+          $formulario['tipo_documento'] = $input['tipo_documento'][$i];
+          $formulario['nombres'] = $input['nombres'][$i];
+          $formulario['apellidos'] = $input['apellidos'][$i];
+          $formulario['genero'] = $input['genero'][$i];
+          $formulario['fecha_nacimiento'] = $input['fecha_nacimiento'][$i];
+          $formulario['mail'] = $input['mail'][$i];
+          $formulario['celular'] = $input['celular'][$i];
+          $formulario['eps'] = $input['eps'][$i];
+          $formulario['barrio'] = $input['barrio'][$i];
+          $formulario['tipo_sangre'] = $input['tipo_sangre'][$i];
+          $formulario['nombre_contacto'] = $input['nombre_contacto'][$i];
+          $formulario['numero_contacto'] = $input['numero_contacto'][$i];
+          $formulario->save();
+          $i++;
+      }
         return $formulario;        
     }
 

@@ -38,28 +38,16 @@
          <br>
       </div>
    </div>
-   <!-- primer y segundo nombre-->
+   <!-- nombres y apellidos-->
    <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-md-5">
-         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Primer Nombre </label>
-         <input required type="text" class="form-control" id="primer_nombre" name="primer_nombre" onkeyup="javascript:this.value=this.value.toUpperCase();" >
+         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Nombres </label>
+         <input required type="text" class="form-control" id="nombres" name="nombres" onkeyup="javascript:this.value=this.value.toUpperCase();" >
       </div>
       <div class="col-md-5">
-         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF">Segundo Nombre </label>
-         <input type="text" class="form-control" id="segundo_nombre" name="segundo_nombre"  onkeyup="javascript:this.value=this.value.toUpperCase();"><br>
-      </div>
-   </div>
-   <!-- primer y segundo apellido-->
-   <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-md-5">
-         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Primer Apellido </label>
-         <input required type="text" class="form-control" id="primer_apellido" name="primer_apellido"  onkeyup="javascript:this.value=this.value.toUpperCase();" >
-      </div>
-      <div class="col-md-5">
-         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Segundo Apellido</label>
-         <input required type="text" class="form-control" id="segundo_apellido" name="segundo_apellido" onkeyup="javascript:this.value=this.value.toUpperCase();" ><br>
+         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF">Apellidos</label>
+         <input type="text" class="form-control" id="apellidos" name="apellidos"  onkeyup="javascript:this.value=this.value.toUpperCase();" required><br>
       </div>
    </div>
    <!-- género y fecha de nacimiento-->
@@ -90,7 +78,7 @@
          <input required type="number" class="form-control" id="celular" name="celular"><br>
       </div>
    </div>
-   <!-- eps y talla de camiseta-->
+   <!-- eps y barrio-->
    <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-md-5">
@@ -98,28 +86,17 @@
          <input required type="text" class="form-control" id="eps" name="eps" onkeyup="javascript:this.value=this.value.toUpperCase();" >
       </div>
       <div class="col-md-5">
-         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Talla de camiseta</label>
-         <select name="talla" id="talla" class="form-control" >
-            <option value="">Seleccione</option>
-            <option value="1">XS</option>
-            <option value="2">S</option>
-            <option value="3">M</option>
-            <option value="4">L</option>
-            <option value="5">XL</option>
-         </select>
+         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Barrio</label>
+         <input required type="text" class="form-control" id="barrio" name="barrio" onkeyup="javascript:this.value=this.value.toUpperCase();" >
          <br>
       </div>
    </div>
-   <!-- barrio y RH-->
+   <!--  RH y  nombre de contacto-->
    <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-md-5">
-         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Barrio</label>
-         <input required type="text" class="form-control" id="barrio" name="barrio" onkeyup="javascript:this.value=this.value.toUpperCase();" >
-      </div>
-      <div class="col-md-5">
          <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Tipo de sangre</label>
-         <select name="tipo_sangre" id="tipo_sangre" class="form-control" >
+         <select name="tipo_sangre" id="tipo_sangre" class="form-control" required >
             <option value="">Seleccionar</option>
             <option value="A-">A-</option>
             <option value="A+">A+</option>
@@ -130,19 +107,22 @@
             <option value="O-">O-</option>
             <option value="O+">O+</option>
          </select>
+      </div>
+      <div class="col-md-5">
+          <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Nombre de contacto de emergencia</label>
+         <input required type="text" class="form-control" id="nombre_contacto" name="nombre_contacto">
          <br>
       </div>
    </div>
-   <!-- nombre y número de contacto de emergencia-->
+   <!-- número de contacto de emergencia-->
    <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-md-5">
-         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Nombre de contacto de emergencia</label>
-         <input required type="text" class="form-control" id="nombre_contacto" name="nombre_contacto">
+          <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Número de contacto de emergencia</label>
+         <input required type="text" class="form-control" id="numero_contacto" name="numero_contacto"><br>
       </div>
       <div class="col-md-5">
-         <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="color: #FBF8EF"><span style="font-size: 20px;text-transform: capitalize;color:#00ade6">*&nbsp;</span>Número de contacto de emergencia</label>
-         <input required type="text" class="form-control" id="numero_contacto" name="numero_contacto"><br>
+         
       </div>
    </div>
    </fieldset>
@@ -158,10 +138,10 @@
          <div class="freebirdFormviewerViewItemsItemItemheader">
             <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
                <div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" id="i1" role="heading" aria-level="2" aria-describedby="i.desc.131124881" style="color: #58D3F7;font-size: 20px; font-family: calibri">CONSENTIMIENTO INFORMADO <span class="freebirdFormviewerViewItemsItemRequiredAsterisk" aria-hidden="true" style="font-size: 20px;text-transform: capitalize;color:#00ade6">*</span><br><br><br><br><br><br><br><br><br><br></div>
-               <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.131124881" dir="auto" align="justify" style="color: #FBF8EF;font-size: 16px; font-family: calibri">Manifiesto que he decidido participar voluntariamente en la actividad ECOTRAVESÍA CERROS ORIENTALES, mediante el uso de una bicicleta Todo Terreno, haciéndolo bajo mi entera responsabilidad, manifestando que me encuentro en perfecto estado físico y de salud. Adicionalmente DECLARO que me dieron las recomendaciones necesarias y que aceptaré cualquier decisión de la organización y del Instituto Distrital de Recreación y Deporte – IDRD, sobre mi participación. <br>
-                  Asumo todos los riesgos asociados con mi recorrido, incluidos pero no limitados, a caídas y demás accidentes, enfermedades generales, enfermedades de tipo cardíaco, por el contacto con otras personas o elementos, las condiciones climáticas incluida temperatura, lluvia y humedad, tránsito vehicular, estado de las vías, y en general cualquier tipo de riesgos que declaro conocidos y valorados por mí. Así mismo declaro que conozco la información general. <br>
-                  Manifiesto que libero a los organizadores, al Instituto Distrital de Recreación y Deporte – IDRD, Alcaldía Mayor de Bogotá, aliados, patrocinadores, representantes y sucesores, de todo reclamo o responsabilidad de cualquier tipo que surja por mi participación en el recorrido, aunque esta responsabilidad pueda surgir por negligencia o culpa de la organización; así como de cualquier extravío, robo y/o hurto. <br>
-                  Por último, autorizo a los organizadores a iniciar las acciones que consideren pertinentes, en caso de que por mi participación genere un hecho que pueda afectar los intereses del Instituto Distrital de Recreación y Deporte – IDRD. Igualmente, autorizo al IDRD para que haga uso de las fotografías, películas, videos, grabaciones y cualquier otro medio de registro de este programa para su uso legítimo, sin reclamación o compensación económica alguna.
+               <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.131124881" dir="auto" align="justify" style="color: #FBF8EF;font-size: 16px; font-family: calibri">Manifiesto que he decidido participar voluntariamente en el evento 24 HORAS DE CICLO MONTAÑISMO., mediante el uso de una bicicleta Todo Terreno, haciéndolo bajo mi entera responsabilidad, manifestando que me encuentro en perfecto estado físico y de salud. Adicionalmente DECLARO que me dieron las recomendaciones necesarias y que aceptaré cualquier decisión de la organización y del Instituto Distrital de Recreación y Deporte – IDRD, sobre mi participación. <br>
+               Asumo todos los riesgos asociados con mi recorrido, incluidos pero no limitados, a caídas y demás accidentes, enfermedades generales, enfermedades de tipo cardíaco, por el contacto con otras personas o elementos, las condiciones climáticas incluida temperatura, lluvia y humedad, estado de las vías, y en general cualquier tipo de riesgos que declaro conocidos y valorados por mí. Así mismo declaro que conozco la información general. <br>
+               Manifiesto que libero a los organizadores, al Instituto Distrital de Recreación y Deporte – IDRD, Alcaldía Mayor de Bogotá, aliados, patrocinadores, representantes y sucesores, de todo reclamo o responsabilidad de cualquier tipo que surja por mi participación en el recorrido, aunque esta responsabilidad pueda surgir por negligencia o culpa de la organización; así como de cualquier extravío, robo y/o hurto. <br>
+               Por último, autorizo a los organizadores a iniciar las acciones que consideren pertinentes, en caso de que por mi participación genere un hecho que pueda afectar los intereses del Instituto Distrital de Recreación y Deporte – IDRD. Igualmente, autorizo al IDRD para que haga uso de las fotografías, películas, videos, grabaciones y cualquier otro medio de registro de este programa para su uso legítimo, sin reclamación o compensación económica alguna.
                </div>
             </div>
          </div>
