@@ -31,14 +31,22 @@ $( function() {
    var conteo= 0 ;
 
     $('#enviar').click(function(e){
+      var id_categoria = $('#categoria').val();
+      if(id_categoria == '3'){
+         var array_sexo = $("select[name='genero[]']")
+              .map(function(){return $(this).val();}).get();
+            
+        var valida =  $.inArray( '2', array_sexo );
+        if(valida == 0 || valida == -1 ){alert('Mínimo debe ingresar una mujer en esta categoría'); return;}
+        }
       if(x <4){
 
-         alert('Minimo 4');
-         
-      }else{
-          $('#validar').click();
+         alert('Mínimo 4 participantes');
+       return;  
       }
-   });
+      
+          $('#validar').click();
+      });
 
     $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
 e.preventDefault(); $(this).parent('div').remove(); x--;
