@@ -42,6 +42,8 @@ use PDF;
 
 use App\Form;
 
+use App\Equipo;
+
 
 
 class PdfController extends BaseController {
@@ -58,11 +60,31 @@ class PdfController extends BaseController {
 
       $id = $post['id'];
 
-      $usuario = Form::where('cedula', $id)->first();   
+      $usuario = Form::where('cedula', $id)->with('equipo')->first();   
 
+      if(!empty($usuario->equipo)){
+
+        $integrantes = Form::where('id_equipo',$usuario->equipo['id'])->get();
+
+
+          
+          /* return view('carnetequipos', ['formulario' => $usuario, 'equipo' => $usuario->equipo,'integrantes' =>$integrantes ]);
+
+            exit();*/
+
+            $view =  view('carnetequipos', ['formulario' => $usuario, 'equipo' => $usuario->equipo,'integrantes' =>$integrantes ])->render();
+
+            $pdf = PDF::loadHTML($view);
+
+            return $pdf->setPaper('a5', 'portrait')->stream('24 Horas de Ciclo montañismo '.date('l jS \of F Y h:i:s A')); 
+
+      }
+
+
+/* inscripción individual*/
       if (empty($usuario)) { return view('error',['error' => 'No existe este usuario'] ); exit(); }
-
-     /*return view('carnet', ['formulario' => $usuario]);
+/*
+     return view('carnet', ['formulario' => $usuario]);
 
       exit();*/
 
@@ -70,7 +92,7 @@ class PdfController extends BaseController {
 
       $pdf = PDF::loadHTML($view);
 
-      return $pdf->setPaper('a5', 'portrait')->stream('Ecotravesía '.date('l jS \of F Y h:i:s A'));     
+      return $pdf->setPaper('a5', 'portrait')->stream('24 Horas de Ciclo montañismo '.date('l jS \of F Y h:i:s A'));     
 
     }
 

@@ -18,15 +18,15 @@ img{
  <img src="https://www.idrd.gov.co/sitio/idrd/sites/default/files/Cabezote%20limpio.jpg">
 
       <p style="font-family: times, serif; font-size:15pt; font-style:italic" align="center">{{$formulario->primer_nombre}}&nbsp;{{$formulario->segundo_nombre}}&nbsp;{{$formulario->primer_apellido}}&nbsp;{{$formulario->segundo_apellido}} </p>
-      <p align="center"><strong>BIENVENIDO, YA HACES PARTE DE LA ECOTRAVESÍA CERROS ORIENTALES 2017</strong></p><br>
+      <p align="center"><strong>BIENVENIDO, YA HACES PARTE 24 HORAS DE CICLO MONTAÑISMO</strong></p><br>
       <p align="justify">Este documento será tu comprobante de inscripción, el cual deberás entregar impreso o descargarlo en tu celular para verificar los datos el día del evento.</p>
-      <p>Fecha: Domingo 24 de Septiembre de 2017</p>
-      <p>Hora: 7:00 am</p>
-      <p>Lugar de encuentro: Parque Nacional</p>
+      <p>Fecha: Sábado 30 de septiembre a Domingo 1 de octubre de 2017.</p>
+      <p>Hora: Inicio a las 12:00 m Final 24 horas después.</p>
+      <p>Lugar de encuentro: Parque Simón Bolívar.</p>
 
       <p align="center"><strong >DETALLES DE TU INSCRIPCIÓN</strong></p>
   
-     <strong>Nombre  Completo:</strong> {{$formulario->primer_nombre}}&nbsp;{{$formulario->segundo_nombre}}&nbsp;{{$formulario->primer_apellido}}&nbsp;{{$formulario->segundo_apellido}}
+     <strong>Nombre  Completo:</strong> {{$formulario->nombres}}&nbsp;{{$formulario->apellidos}}
      <br>      
      <strong>Documento:</strong> {{$formulario->cedula}}
      <br>

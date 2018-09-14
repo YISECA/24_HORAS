@@ -130,6 +130,8 @@ section#page1 {
                         <ul class="ul_inicio">
 
                             <font size="3" color="#FBEFEF">
+
+                                               <li style="color: #FBEFEF; font-size: 23px; font-family: calibri; color: #58D3F7">La categoría especial INFANTIL se abren las inscripciones el 30 de septiembre a las 10:00 a.m en la carpa de los jueces.</li><br>
                                
                                                <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">El kit del evento será entregado en la charla técnica el día 29 de Septiembre en las Instalaciones del IDRD Calle 63 No 59a-06 de 6:00pm a 8pm.</li><br>
 
@@ -143,15 +145,15 @@ section#page1 {
 
                                                <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">En la inscripción de equipos la suma de las edades debe ser superior a 100 años.</li><br>
 
-                                               <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">Se informa que el IDRD dispondrá de una zona de camping para que los participantes coloquen sus equipos e implementos. Cabe resaltar que a esta zona sólo ingresan los participantes más un asistente de cada equipo previamente registrado. (El registro de los asistentes se realizará el mismo día del evento).<br>
-                                               <strong>Nota:</strong> El IDRD, ni la Administración del Parque Simón Bolívar, ni los organizadores no asumirán daños, pérdidas o perjuicios que puedan presentarse dentro de esta zona o dentro del parque.
+                                               <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">Se informa que el IDRD dispondrá de una zona de camping para que los participantes coloquen sus equipos e implementos. Cabe resaltar que a esta zona sólo ingresan los participantes más un asistente de cada equipo previamente registrado. (El registro de los asistentes se realizará el mismo día del evento).<br><br>
+                                               <strong><font style="font-size: 22px">Nota:</font></strong> El IDRD, ni la Administración del Parque Simón Bolívar, ni los organizadores asumirán daños, pérdidas o perjuicios que puedan presentarse dentro de esta zona o dentro del parque.
                                                </li><br>
 
                                                <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">Para habilitar la participación en la competencia  en cada una de las categorías deben de existir mínimo 8 equipos inscritos.</li><br>
 
                                                <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">Se habilitará  un máximo de 400 participantes, teniendo en cuenta que hay categoría individual, y categoría de equipos de 4 participantes.</li><br>
 
-                                               <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">El tiempo estipulado en todos los casos para la realización del evento es desde las 12 pm del día sábado 30 de Septiembre hasta las 12 pm del día Domingo 1 de octubre, después de éste horario la responsabilidad es exclusiva del participante.</li><br>
+                                               <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">El tiempo estipulado en todos los casos para la realización del evento es desde las 12m del día sábado 30 de Septiembre hasta las 12m del día Domingo 1 de octubre, después de éste horario la responsabilidad es exclusiva del participante.</li><br>
 
                                                <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">No realizar maniobras peligrosas que puedan afectar su integridad o la de los demás.</li><br>
 
@@ -167,9 +169,6 @@ section#page1 {
 
                                                <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">Se recomienda visitar el médico antes de su participación en el evento para conocer su estado de salud y físico.</li><br>
                                                <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">No arrojar basura durante el trayecto.</li><br>
-
-                                               <li style="color: #FBEFEF; font-size: 16px; font-family: calibri"><strong>Altimetría:</strong> De 3030 msnm (Altura mínima) a 3880 msnm (Altura máxima).</li>
-
                                                
         
                             </font>

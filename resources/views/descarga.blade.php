@@ -19,6 +19,7 @@
     <form action="carnet" method="POST"> 
 
 		<fieldset class="form-group">
+		<h1>Para descargar la inscripción de los equipos solo debe digitar el número de cédula de cualquiera de los integrantes</h1>
 
 			<label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput"><font color="#FFFFFF">Documento de identidad</font></label>
 

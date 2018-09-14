@@ -47,12 +47,12 @@ class FormController extends BaseController
         <thead>
            <tr>
              <th style="text-transform: capitalize;">Código de Inscripción</th>
+              <th style="text-transform: capitalize;">equipo</th>
+              <th style="text-transform: capitalize;">Categoría</th>
              <th style="text-transform: capitalize;">cedula</th>
              <th style="text-transform: capitalize;">tipo_documento</th>
-             <th style="text-transform: capitalize;">primer_nombre</th>
-             <th style="text-transform: capitalize;">segundo_nombre</th>
-             <th style="text-transform: capitalize;">primer_apellido</th>
-             <th style="text-transform: capitalize;">segundo_apellido</th>
+             <th style="text-transform: capitalize;">nombres</th>
+             <th style="text-transform: capitalize;">apellidos</th>
              <th style="text-transform: capitalize;">genero</th>
              <th style="text-transform: capitalize;">fecha_nacimiento</th>
              <th style="text-transform: capitalize;">mail</th>
@@ -72,12 +72,12 @@ class FormController extends BaseController
       {
 
        $tabla.='<tr style="color: #000000"><td>'.$value->id.'</td>';
+       $tabla.='<td>'.$value->equipo['nombre_equipo'].'</td>';
+       $tabla.='<td>'.$value->equipo['categoria'].'</td>';
        $tabla.='<td>'.$value->cedula.'</td>';
        $tabla.='<td>'.$value->tipo_documento.'</td>';
-       $tabla.='<td>'.$value->primer_nombre.'</td>';
-       $tabla.='<td>'.$value->segundo_nombre.'</td>';
-       $tabla.='<td>'.$value->primer_apellido.'</td>';
-       $tabla.='<td>'.$value->segundo_apellido.'</td>';
+       $tabla.='<td>'.$value->nombres.'</td>';
+       $tabla.='<td>'.$value->apellidos.'</td>';
        $tabla.='<td>'.$value->genero.'</td>';
        $tabla.='<td>'.$value->fecha_nacimiento.'</td>';
        $tabla.='<td>'.$value->mail.'</td>';
@@ -121,7 +121,7 @@ class FormController extends BaseController
     }
 
 
-     if($this->inscritos()<=400)
+     if($this->inscritos()<=368)
 
      {
 
@@ -138,7 +138,7 @@ class FormController extends BaseController
              $formulario = $this->store($formulario, $request);
         }
             //$this->store($formulario, $request->input());
-           /*  Mail::send('email', ['user' => $request->input('mail'),'formulario' => $formulario], function ($m) use ($request) 
+           /*Mail::send('email', ['user' => $request->input('mail'),'formulario' => $formulario], function ($m) use ($request) 
             {
                 $m->from('no-reply@idrd.gov.co', 'Registro Exitoso a 24 horas de ciclo montañismo');
                 $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Registro Exitoso a 24 horas de ciclo montañismo!');
@@ -147,7 +147,7 @@ class FormController extends BaseController
       }else{
         return view('error', ['error' => 'Lo sentimos el limite de inscritos fue superado!']);
       }
-        return view('error', ['error' =>'  BIENVENIDO, YA HACES PARTE DE 24 HORAS DE CICLO MONTAÑISMO 2017, verifica los datos registrados en tu correo electrónico o descarga tu comprobante de inscripción en el menú "Descargar inscripción" que se encuentra en la parte superior.']);
+        return view('error', ['error' =>'  BIENVENIDO, YA HACES PARTE DE 24 HORAS DE CICLO MONTAÑISMO 2017, descarga tu comprobante de inscripción en el menú "Descargar inscripción" que se encuentra en la parte superior.']);
     }
 
  // conteo de la tabla

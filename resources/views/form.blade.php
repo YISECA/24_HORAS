@@ -14,7 +14,7 @@
 <form method="POST" action="insertar" id="form_gen" enctype="multipart/form-data">
    <section id="page1">
    <div class="panel panel-default">
-   <div class="panel-heading">Información Personal</div>
+   <div class="panel-heading" style="font-size: 23px; text-align: center">Inscripción Individual</div>
    <div class="panel-body">
    <div class="col-md-5">
       <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput" style="color: #FBF8EF">Todos los campos con<span style="font-size: 20px;text-transform: capitalize;color:#00ade6">&nbsp;*&nbsp;</span>son obligatorios</label>

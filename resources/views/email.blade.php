@@ -19,7 +19,7 @@
         </tr>
       <tr>
         <td width="256"><center>Nombre  Completo:</center> </td>
-        <td width="286">{{$formulario->primer_nombre}}&nbsp;{{$formulario->segundo_nombre}}&nbsp;{{$formulario->primer_apellido}}&nbsp;{{$formulario->segundo_apellido}}</td>
+        <td width="286">{{$formulario->nombres}}&nbsp;{{$formulario->apellidos}}</td>
         </tr>
       <tr>
         <td><center>Documento:</center></td>

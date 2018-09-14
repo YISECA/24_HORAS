@@ -113,9 +113,9 @@
 
                <li><a href="cerrar" id="a-registro">Inicio</a></li>
 
-              <li><a href="registro" id="a-registro">Registrarse</a></li>
-
-              <li><a href="descarga" id="a-descarga">Descargar Inscripción</a></li>
+              <!--<li><a href="registro" id="a-registro">Registrarse</a></li>-->
+              
+             <li><a href="descarga" id="a-descarga">Descargar Inscripción </a></li>
 
               <!--<li><a href="login" id="a-login" >Iniciar sesion</a></li>-->
 
