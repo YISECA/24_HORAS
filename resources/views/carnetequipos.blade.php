@@ -50,10 +50,10 @@ $integrantes
 
 
       <p style="font-family: times, serif; font-size:20pt; font-style:italic" align="center"> {{$equipo->nombre_equipo}} </p>
-      <p align="center"><strong>BIENVENIDOS, YA HACEN PARTE DEL EVENTO 24 HORAS DE CICLO MONTAÑISMO 2017</strong></p><br>
+      <p align="center"><strong>BIENVENIDOS, YA HACEN PARTE DEL EVENTO 24 HORAS DE CICLO MONTAÑISMO 2018</strong></p><br>
       <p align="justify">Este documento será su comprobante de inscripción, el cual deberán entregar impreso o descargarlo en el celular para verificar los datos el día del evento.</p>
-      <p>Fecha: Sábado 30 de septiembre a Domingo 1 de octubre de 2017.</p>
-      <p>Hora: Inicio a las 12:00 m Final 24 horas después.</p>
+      <p>Fecha: Sábado 29 de septiembre a Domingo 30 de Septiembre de 2018</p>
+      <p>Hora: Inicio a las 12:00 m, termina 24 horas después. </p>
       <p>Lugar de encuentro: Parque Simón Bolívar.</p>
 
       <p align="center"><strong >DETALLES DE TU INSCRIPCIÓN EQUIPO</strong></p>

@@ -33,8 +33,12 @@
         <td><center>Número  de Inscripción:</center> </td>
         <td style="font-size: 20pt">{{$formulario->id}}</td>
         </tr>
-    </table>
-      <p><br>
+    </table><br>
+      <p align="center" style="font-size: 12pt"><br>
+        * El kit del evento será entregado en la Charla Técnica el día viernes 28 de septiembre en las Instalaciones del IDRD Calle 63 No 59a-06 a las 4:00 pm.<br>
+        * Para la entrega de los kits se requiere presentar cedula de ciudadanía, certificado médico que garantice que el participante se encuentra en óptimas condiciones para competir y soporte de inscripción. En el caso en el que no pueden asistir a la entrega, deberá autorizar a un tercero por medio de una carta anexando copia de la cédula de ciudadanía y certificado médico del participante para la entrega de los mismos.<br>
+      </p><br>
+      <p align="center" style="font-size: 12pt"><br>
         Cualquier inquietud acércate a las Instalaciones del IDRD Calle 63 No 59a-06 Área de Recreación, o llama al teléfono 6605400 Ext. 2007 y 3002.
       </p>
       <p>&nbsp;</p>

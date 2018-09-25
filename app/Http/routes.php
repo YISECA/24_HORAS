@@ -4,13 +4,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('registro', function () {                
-    return view('form');
-});
+Route::any('registro','FormController@registro');
 
-Route::get('form2', function () {                
+Route::any('form2','FormController@registro2');
+
+/*Route::get('form2', function () {                
     return view('form2');
-});
+});*/
 
 Route::get('descarga', function () {                
     return view('descarga');

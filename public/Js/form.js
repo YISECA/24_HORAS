@@ -2,9 +2,9 @@ jQuery(document).ready(function($) {
 
 
        $('#fecha_nacimiento').datepicker({
-       	  minDate: new Date(1900,1-1,1), maxDate: '1999-09-24',
+       	 maxDate: '2000-09-28',
       dateFormat: 'yy-mm-dd',
-      yearRange: "-60:-12",
+      yearRange: "-100:-18",
       changeMonth: true,
       changeYear: true,
       });

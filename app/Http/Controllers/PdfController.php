@@ -76,7 +76,7 @@ class PdfController extends BaseController {
 
             $pdf = PDF::loadHTML($view);
 
-            return $pdf->setPaper('a5', 'portrait')->stream('24 Horas de Ciclo montañismo '.date('l jS \of F Y h:i:s A')); 
+            return $pdf->setPaper('a5', 'portrait')->stream('24 Horas de Ciclomontañismo 2018'.date('l jS \of F Y h:i:s A')); 
 
       }
 
@@ -92,7 +92,7 @@ class PdfController extends BaseController {
 
       $pdf = PDF::loadHTML($view);
 
-      return $pdf->setPaper('a5', 'portrait')->stream('24 Horas de Ciclo montañismo '.date('l jS \of F Y h:i:s A'));     
+      return $pdf->setPaper('a5', 'portrait')->stream('24 Horas de Ciclomontañismo 2018'.date('l jS \of F Y h:i:s A'));     
 
     }
 

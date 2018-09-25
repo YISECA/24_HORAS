@@ -4670,7 +4670,7 @@ a.list-group-item-danger.active,button.list-group-item-danger.active,a.list-grou
 }
 .panel {
 	margin-bottom:20px;
-	background-color:#0e0d0db3;
+	background-color:#00000061;
 	border:1px solid transparent;
 	border-radius:4px;
 	-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.05);

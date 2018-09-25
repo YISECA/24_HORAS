@@ -22,6 +22,24 @@ class FormController extends BaseController
 
 {
     var $url;
+
+     public function registro()
+    {
+
+    
+     $localidad = Localidad::orderby('Nombre_Localidad','asc')->get();
+      //dd($horas); exit();
+      return view('form',["localidades"=>$localidad]);
+    }
+     public function registro2()
+    {
+
+    
+     $localidad = Localidad::orderby('Nombre_Localidad','asc')->get();
+      //dd($horas); exit();
+      return view('form2',["localidades"=>$localidad]);
+    }
+
     private function cifrar($M)
     {   
       $C="";
@@ -59,7 +77,7 @@ class FormController extends BaseController
              <th style="text-transform: capitalize;">celular</th>
              <th style="text-transform: capitalize;">eps</th>
              <th style="text-transform: capitalize;">Talla</th> 
-             <th style="text-transform: capitalize;">Barrio</th>   
+             <th style="text-transform: capitalize;">Localidad</th>   
              <th style="text-transform: capitalize;">Tipo de sangre</th>   
              <th style="text-transform: capitalize;">Nombre contacto emergencia</th>   
              <th style="text-transform: capitalize;">número de contacto de emergencia</th> 
@@ -84,7 +102,7 @@ class FormController extends BaseController
        $tabla.='<td>'.$value->celular.'</td>';
        $tabla.='<td>'.$value->eps.'</td>';
        $tabla.='<td>'.$value->talla.'</td>';
-       $tabla.='<td>'.$value->barrio.'</td>';
+       $tabla.='<td>'.$value->localidades['localidad'].'</td>';
        $tabla.='<td>'.$value->tipo_sangre.'</td>';
        $tabla.='<td>'.$value->nombre_contacto.'</td>';
        $tabla.='<td>'.$value->numero_contacto.'</td>';
@@ -121,8 +139,7 @@ class FormController extends BaseController
     }
 
 
-     if($this->inscritos()<=368)
-
+     if($this->inscritos()<=12)
      {
 
          if (!empty($request->equipo)) {
@@ -134,8 +151,13 @@ class FormController extends BaseController
             $equipo->save();
             $formulario = $this->store_equipo($request,$equipo->id);
         }else{
-             $formulario = new Form([]);
-             $formulario = $this->store($formulario, $request);
+
+            if($this->inscritosIndividual()<=2){
+                $formulario = new Form([]);
+                $formulario = $this->store($formulario, $request);
+            }else{
+                return view('error', ['error' => 'Lo sentimos el limite para cupos individuales fue superado!']);
+            }
         }
             //$this->store($formulario, $request->input());
            /*Mail::send('email', ['user' => $request->input('mail'),'formulario' => $formulario], function ($m) use ($request) 
@@ -145,9 +167,9 @@ class FormController extends BaseController
             });*/
           
       }else{
-        return view('error', ['error' => 'Lo sentimos el limite de inscritos fue superado!']);
+        return view('error', ['error' => 'Lo sentimos el limite de inscritpciones ya fue superado']);
       }
-        return view('error', ['error' =>'  BIENVENIDO, YA HACES PARTE DE 24 HORAS DE CICLO MONTAÑISMO 2017, descarga tu comprobante de inscripción en el menú "Descargar inscripción" que se encuentra en la parte superior.']);
+        return view('error', ['error' =>'  BIENVENIDO, YA HACES PARTE DE 24 HORAS DE CICLOMONTAÑISMO 2018, descarga tu comprobante de inscripción en el menú "Descargar inscripción" que se encuentra en la parte superior de la página.']);
     }
 
  // conteo de la tabla
@@ -156,6 +178,13 @@ class FormController extends BaseController
     {
 
       $cant = Form::count('id');
+      return $cant+1;
+    }
+
+    private function inscritosIndividual()
+    {
+     
+      $cant = Form::where('id_equipo',null)->count('id');
       return $cant+1;
     }
 
@@ -171,7 +200,7 @@ class FormController extends BaseController
         $formulario['mail'] = $input['mail'];
         $formulario['celular'] = $input['celular'];
         $formulario['eps'] = $input['eps'];
-        $formulario['barrio'] = $input['barrio'];
+        $formulario['localidad'] = $input['localidad'];
         $formulario['tipo_sangre'] = $input['tipo_sangre'];
         $formulario['nombre_contacto'] = $input['nombre_contacto'];
         $formulario['numero_contacto'] = $input['numero_contacto'];
@@ -195,7 +224,7 @@ class FormController extends BaseController
           $formulario['mail'] = $input['mail'][$i];
           $formulario['celular'] = $input['celular'][$i];
           $formulario['eps'] = $input['eps'][$i];
-          $formulario['barrio'] = $input['barrio'][$i];
+          $formulario['localidad'] = $input['localidad'][$i];
           $formulario['tipo_sangre'] = $input['tipo_sangre'][$i];
           $formulario['nombre_contacto'] = $input['nombre_contacto'][$i];
           $formulario['numero_contacto'] = $input['numero_contacto'][$i];
